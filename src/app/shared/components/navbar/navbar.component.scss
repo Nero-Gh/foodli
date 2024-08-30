@@ -1,0 +1,87 @@
+@import "../../../styles/variables";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 5rem;
+  text-transform: capitalize;
+  font-family: $font-family;
+
+  .logo-col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-weight: $font-700;
+      font-size: $font-18;
+    }
+  }
+
+  .menu-col {
+    position: relative;
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $font-32;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: $font-gap-10;
+        cursor: pointer;
+        width: fit-content;
+        position: relative;
+        transition: $transition;
+
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: $transition;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+        &:hover::after {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: $border-radius-full;
+          background-color: $primary;
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: $transition;
+        }
+      }
+    }
+  }
+  .others {
+    display: flex;
+    align-items: center;
+
+    img {
+      transition: $transition;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    gap: 10px;
+    .navbar-button {
+      --bg-color: #{$primary};
+      --button-width: 100px;
+      --border-radius: #{$border-radius-20};
+      --color: #{$light};
+      --height: #{49px};
+    }
+  }
+}

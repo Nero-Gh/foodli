@@ -1,0 +1,38 @@
+<header class="main">
+  <div class="logo-col">
+    <img src="logo.svg" alt="foodli" />
+    <span>foodli</span>
+  </div>
+  <div class="menu-col">
+    <ul class="menu">
+      <li class="item">
+        <a [routerLink]="['']" [routerLinkActive]="['active']" class="item-link"
+          >why foodeli</a
+        >
+      </li>
+      <li class="item">
+        <a href="#" class="item-link">
+          <span>services</span>
+          <img src="arrow-down.svg" alt="" />
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="item-link">
+          <span>menu</span>
+          <img src="arrow-down.svg" alt="" />
+        </a>
+      </li>
+      <li class="item" class="item-link">
+        <a href="#"> contact </a>
+      </li>
+    </ul>
+  </div>
+  <div class="others">
+    <img src="search.svg" alt="search" />
+    <img src="cart.svg" alt="cart" />
+    <app-button class="navbar-button">
+      <img src="login.svg" alt="login" />
+      <span>Login</span>
+    </app-button>
+  </div>
+</header>

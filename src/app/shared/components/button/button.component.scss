@@ -1,0 +1,52 @@
+@import "../../../styles/variables";
+
+:host {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: var(--bg-color, $primary);
+  padding: var(--padding, 0);
+  width: var(--button-width, $button-width);
+  border-radius: var(--border-radius, $border-radius-12);
+  outline: none;
+  color: var(--color, $dark);
+  font-size: $font-16;
+  text-align: center;
+  cursor: pointer;
+  height: var(--height, 0);
+  transform: scale(0.9);
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($primary, 0.5);
+    transform: scale(1);
+  }
+}
+
+button {
+  outline: none;
+  border: inherit;
+  width: 100%;
+  background-color: inherit;
+  border-radius: inherit;
+  padding: inherit;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
