@@ -43,6 +43,7 @@
           align-items: center;
           gap: 10px;
           transition: $transition;
+          color: $dark;
 
           &:hover {
             color: $primary;

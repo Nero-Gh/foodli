@@ -1,0 +1,93 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/animations";
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-family;
+  margin: 4rem 0;
+
+  .footer-desc {
+    width: 25%;
+    .logo {
+      display: flex;
+      text-transform: capitalize;
+      gap: 1.5rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 2rem;
+
+      .icon {
+        transform: $transform-scale-small;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          transform: $transform-scale-large;
+        }
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 700;
+    }
+
+    .main {
+      text-transform: capitalize;
+      p {
+        width: 100%;
+        font-weight: $font-500;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .news {
+    p {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        color: $primary;
+      }
+    }
+    .newsletter {
+      position: relative;
+
+      input {
+        padding: 15px 30px 15px 5px;
+        border: 1px solid $dark;
+        border-radius: $border-radius-12;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $primary;
+        }
+
+        &:hover {
+          border: 1px solid $secondary;
+        }
+      }
+
+      .send-image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
