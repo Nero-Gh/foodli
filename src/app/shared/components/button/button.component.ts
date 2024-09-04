@@ -8,10 +8,4 @@ import { Component, input } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
 })
-export class ButtonComponent {
-  public title = input('');
-  public backgroundColor = input('');
-  public color = input('');
-  public padding = input('');
-  public imageRight = input('');
-}
+export class ButtonComponent {}

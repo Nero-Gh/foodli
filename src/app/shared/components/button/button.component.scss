@@ -8,22 +8,24 @@
   padding: var(--padding, 0);
   width: var(--button-width, $button-width);
   border-radius: var(--border-radius, $border-radius-12);
+  text-transform: var(--capitalize, "capitalize");
   outline: none;
   color: var(--color, $dark);
-  font-size: $font-16;
+  font-size: var(--font-size, $font-16);
   text-align: center;
+  font-weight: var(--font-weight, $font-500);
   cursor: pointer;
   height: var(--height, 0);
-  transform: scale(0.9);
+  transform: $transform-scale-small;
   transition: $transition;
 
   &:hover {
-    transform: scale(1);
+    transform: $transform-scale-large;
   }
 
   &:focus {
     box-shadow: 0 0 0 3px rgba($primary, 0.5);
-    transform: scale(1);
+    transform: $transform-scale-large;
   }
 }
 
@@ -40,6 +42,10 @@ button {
   align-items: center;
   gap: 10px;
   height: 100%;
+  text-transform: inherit;
+  font-weight: inherit;
+  font-family: $font-family;
+  font-size: inherit;
 
   &:hover {
     cursor: pointer;

@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
   height: 5rem;
   text-transform: capitalize;
   font-family: $font-family;
@@ -70,16 +69,18 @@
     align-items: center;
 
     img {
+      transform: $transform-scale-small;
       transition: $transition;
       &:hover {
         cursor: pointer;
+        transform: $transform-scale-large;
       }
     }
     gap: 10px;
     .navbar-button {
       --bg-color: #{$primary};
       --button-width: 100px;
-      --border-radius: #{$border-radius-20};
+      --border-radius: #{$border-radius-50};
       --color: #{$light};
       --height: #{49px};
     }

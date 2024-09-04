@@ -1,0 +1,65 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/animations";
+
+.serve-main {
+  margin-top: 10rem;
+  font-family: $font-family;
+  .upper {
+    position: relative;
+
+    .title {
+      text-align: center;
+      text-transform: capitalize;
+      h3 {
+        font-weight: $font-600;
+        font-size: $font-24;
+        color: $primary;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: $font-45;
+        width: 45%;
+        margin: -10px auto;
+      }
+    }
+    .dots {
+      .dots-image-1,
+      .dots-image-2 {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        animation: spin 2.5s ease-in-out infinite;
+      }
+      .dots-image-1 {
+        top: 4rem;
+        left: 8rem;
+      }
+
+      .dots-image-2 {
+        top: 1rem;
+        right: 8rem;
+      }
+    }
+  }
+
+  .lower {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 20rem;
+      transform: $transform-scale-small;
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover {
+        transform: $transform-scale-large;
+      }
+
+      .card-content {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

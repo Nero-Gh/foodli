@@ -1,0 +1,251 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/animations";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 0;
+  font-family: $font-family;
+
+  .hero-left {
+    flex: 1;
+    position: relative;
+
+    .hero-left-up {
+      width: 595px;
+      .hero-left-up-button {
+        --capitalize: #{"capitalize"};
+        --bg-color: #{$tertiary};
+        --width: #{$button-width};
+        --height: #{$button-height-52};
+        --border-radius: #{$border-radius-50};
+        --color: #{$primary};
+        --font-weight: #{$font-700};
+        --padding: #{$padding-5};
+      }
+    }
+
+    .hero-left-middle {
+      margin: 1rem 0;
+
+      h1 {
+        font-size: $font-67;
+        font-family: $font-family-rubik;
+        span {
+          font-family: $font-family-lobster;
+          color: $primary;
+        }
+        margin-bottom: -0.5rem;
+      }
+      p {
+        font-family: $font-18;
+        width: 470px;
+      }
+    }
+
+    .hero-left-down {
+      display: flex;
+      align-items: center;
+      .hero-left-down-button {
+        --capitalize: #{"capitalize"};
+        --bg-color: #{$primary};
+        --width: #{$button-width};
+        --height: #{$button-height-68};
+        --border-radius: #{$border-radius-50};
+        --color: #{$light};
+      }
+
+      .hero-left-down-play {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        transform: $transform-scale-small;
+        transition: $transition;
+        cursor: pointer;
+        margin-top: 10px;
+        gap: 20px;
+
+        &:hover {
+          transform: $transform-scale-large;
+        }
+
+        & .play {
+          height: 50px;
+          width: 50px;
+          background-color: #ffea00;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $border-radius-full;
+          padding: 5px;
+          animation: pulse 2s infinite;
+        }
+
+        span {
+          margin-bottom: 18px;
+          text-transform: capitalize;
+          margin-top: 1rem;
+          font-weight: $font-500;
+        }
+      }
+    }
+
+    .dot {
+      position: absolute;
+      top: 42%;
+      right: 0;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+  }
+
+  .hero-right {
+    flex: 1;
+    justify-self: end;
+    width: fit-content;
+    position: relative;
+
+    .food {
+      float: right;
+    }
+
+    .clock {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: float 1.5s ease-in-out infinite;
+    }
+    .fire {
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation: spin 2s linear infinite;
+    }
+    .curve-arrow {
+      position: absolute;
+      top: 13%;
+      right: 0;
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+
+    .red-dot {
+      position: absolute;
+      bottom: 30%;
+      right: 0;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    .active-user {
+      position: absolute;
+      bottom: 20%;
+      left: -5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      background-color: $light;
+      padding: $padding-10;
+      border-radius: $border-radius-50;
+      text-transform: capitalize;
+      box-shadow: $box-shadow;
+      animation: slide 3.5s ease-in-out infinite;
+
+      .middle {
+        .name {
+          font-weight: $font-700;
+        }
+      }
+    }
+
+    .food-order {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: $font-gap-10;
+      background-color: $light;
+      padding: $padding-10;
+      border-radius: $border-radius-20;
+      text-transform: capitalize;
+      box-shadow: $box-shadow;
+      animation: swing 4s ease-in-out infinite;
+
+      .right {
+        .title {
+          font-weight: $font-700;
+        }
+
+        .stars {
+          color: yellow;
+          display: flex;
+        }
+
+        .price {
+          span {
+            color: $primary;
+            font-weight: $font-600;
+            font-size: $font-12;
+          }
+        }
+      }
+    }
+  }
+}
+
+.avator {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  height: 80px;
+  margin: -4rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  .left {
+    display: flex;
+    border-radius: 100%;
+    gap: 1px;
+
+    .left-image {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      margin-left: -10px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover:not(:last-of-type) {
+        transform: translate(5px);
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+
+    .right-upper {
+      margin-top: -15px;
+    }
+    .stars {
+      width: 20px;
+      height: 20px;
+    }
+
+    .right-lower {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: -30px;
+    }
+  }
+
+  .red-dot {
+    position: absolute;
+    right: 40%;
+    top: 20px;
+    animation: pulse 3s ease-in-out infinite;
+  }
+}

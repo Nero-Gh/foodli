@@ -1,0 +1,73 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/animations";
+
+.main-menu {
+  margin-top: 5rem;
+  font-family: $font-family;
+  .upper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .title {
+      width: 40%;
+      h3 {
+        text-transform: uppercase;
+        color: $primary;
+        letter-spacing: $letter-spacing;
+      }
+      h2 {
+        font-size: $font-45;
+        margin-top: 0.9rem;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      align-self: flex-end;
+      position: absolute;
+      right: 0;
+      top: 8rem;
+      gap: 1rem;
+      .prev,
+      .next {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+        background-color: $light;
+        border: $border-all;
+
+        &:hover {
+          background-color: $primary;
+          color: $light;
+        }
+      }
+    }
+
+    .dot-images {
+      .image-1 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        background-color: $secondary;
+        left: 40%;
+        top: 40px;
+        transform: rotate(45deg);
+        @include animation(spin, 3.5s, ease-in-out, infinite);
+      }
+      .image-2 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 20px;
+        background-color: $primary;
+        right: 30%;
+        top: -40px;
+        transform: rotate(45deg);
+        @include animation(bounce, 3.5s, ease-in-out, infinite);
+      }
+    }
+  }
+}
